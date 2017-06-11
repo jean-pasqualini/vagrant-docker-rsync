@@ -1,1 +1,4 @@
+ajouter dans /lib/systemd/system/docker.service au niveau de la vm -H 0.0.0.0:2735
 export DOCKER_HOST=tcp://192.168.33.10:2375
+on peut acceder au port 80 de la vm via le port 80 de la machine hote
+docker version
