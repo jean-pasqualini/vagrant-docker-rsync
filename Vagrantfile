@@ -89,6 +89,6 @@ Vagrant.configure("2") do |config|
        $(lsb_release -cs) \
        stable"
     sudo apt-get update
-    sudo apt-get install docker-ce
+    sudo apt-get install -y docker-ce
   SHELL
 end
