@@ -46,6 +46,10 @@ Vagrant.configure("2") do |config|
   # config.vm.synced_folder "../data", "/vagrant_data"
   config.vm.synced_folder ".", "/Users/aurore/project/synctest", type: "rsync", rsync__exclude: ".git/"
 
+  config.vm.provider "virtualbox" do |vb|
+    vb.memory = "4096"
+  end
+  
   # Provider-specific configuration so you can fine-tune various
   # backing providers for Vagrant. These expose provider-specific options.
   # Example for VirtualBox:
