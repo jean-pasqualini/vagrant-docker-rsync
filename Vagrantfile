@@ -13,6 +13,7 @@ Vagrant.configure("2") do |config|
   # Every Vagrant development environment requires a box. You can search for
   # boxes at https://atlas.hashicorp.com/search.
   config.vm.box = "ubuntu/xenial64"
+  config.disksize.size = '50GB'
 
   # Disable automatic box update checking. If you disable this, then
   # boxes will only be checked for updates when the user runs
@@ -47,7 +48,6 @@ Vagrant.configure("2") do |config|
   config.vm.synced_folder ".", "PWD", type: "rsync", rsync__exclude: ".git/"
 
   config.vm.provider "virtualbox" do |vb|
-    vb.customize ["modifyhd", "disk id", "--resize", "51200"]
     vb.memory = "4096"
   end
   
