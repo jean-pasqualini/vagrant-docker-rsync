@@ -9,3 +9,13 @@ function vagrant:docker:up()
         export DOCKER_HOST=tcp://192.168.33.10:2375
         sudo vagrant up
 }
+
+function vagrant:docker:provision()
+{
+        sudo vagrant up --provision
+}
+
+function vagrant:docker:connect()
+{
+        export DOCKER_HOST=tcp://192.168.33.10:2375
+}
