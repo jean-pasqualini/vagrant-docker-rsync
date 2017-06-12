@@ -81,7 +81,7 @@ Vagrant.configure("2") do |config|
   # SHELL
 
   config.vm.provision "shell", inline: <<-SHELL
-  	sudo apt-get install \
+    sudo apt-get install \
         apt-transport-https \
         ca-certificates \
         curl \
