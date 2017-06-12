@@ -1,5 +1,3 @@
-  GNU nano 2.7.4                                                                             Fichier : vagrant.sh                                                                                       
-
 #!/bin/bash
 
 function vagrant:docker:up()
