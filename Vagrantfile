@@ -94,5 +94,8 @@ Vagrant.configure("2") do |config|
        stable"
     sudo apt-get update
     sudo apt-get install -y docker-ce
+    sudo cat /lib/systemd/system/docker.service | sed 's/fd:\/\//fd:\/\/ -H 0.0.0.0:2375/g' > /lib/systemd/system/docker.service
+    sudo systemctl daemon-reload
+    sudo service docker restart
   SHELL
 end
